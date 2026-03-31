@@ -69,9 +69,9 @@
             <div class="grid">
                 <div class="card">
                     <div class="card-content">
-                        <h3>🎓 Claim Scholarship</h3>
-                        <p>Claim your scholarship on any professional technical course of your choice.</p>
-                        <button class="sfs-btn" onclick="openForm('Register Scholarship')">Claim This Offer</button>
+                        <h3>🎓 Claim Scholarships</h3>
+                        <p>Claim Scholarships on any professional technical course of your choice.</p>
+                        <button class="sfs-btn" onclick="openForm('Claim Scholarships')">Claim This Offer</button>
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@
                 <input type="tel" id="uPhone" class="sfs-input" placeholder="WhatsApp Number" required>
                 <input type="email" id="uEmail" class="sfs-input" placeholder="Email Address" required>
                 
-                <div id="CourseSelectBox">
+                <div id="courseSelectBox" class="hidden">
                     <label style="font-size: 0.8rem;">Select Course:</label>
                     <select id="uCourse" class="sfs-input">
                         <option>AutoCAD</option>
@@ -175,7 +175,7 @@
 
         function openForm(type) {
             document.getElementById('formTitle').innerText = type;
-            document.getElementById('courseSelectBox').classList.toggle('hidden', type !== '50% Off Course');
+            document.getElementById('courseSelectBox').classList.toggle('hidden', type !== 'Claim Scholarships');
             document.getElementById('modal').style.display = 'flex';
         }
 
